@@ -49,7 +49,7 @@ $ solhint ./contracts/Reentrancy/ReentrancyVulnerable2.sol
 静的解析ツールsolhintでReentrancyAttackの攻撃ベクトルがあることが検知された。
 
 ### コード例３ ReentrancyVulnerable3.sol
-[ReentrancyVulnerable3.sol](./contracts/Reentracy/ReentrancyVulnerable3.sol)は[Ethereum Smart Contract Best Practices(Known Attacks)](https://consensys.github.io/smart-contract-best-practices/known_attacks/)から参照した。
+[ReentrancyVulnerable3.sol](./contracts/Reentrancy/ReentrancyVulnerable3.sol)は[Ethereum Smart Contract Best Practices(Known Attacks)](https://consensys.github.io/smart-contract-best-practices/known_attacks/)から参照した。
 
 solhintで静的解析した結果
 ```
