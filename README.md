@@ -2,7 +2,7 @@
 
 このレポジトリは以下の２点をまとめたもの。
 - Reentrancy Attackの攻撃ベクトルのあるコードを静的解析した結果
-- 論文[A seurvey of attacks of Ethereum smart contracts](https://eprint.iacr.org/2016/1007.pdf)から参照した機弱性のあるコード
+- 論文[A seurvey of attacks of Ethereum smart contracts](https://eprint.iacr.org/2016/1007.pdf)から参照した脆弱性のあるコード
 
 
 ## Reentrancy Attackの静的解析
@@ -28,14 +28,14 @@ $ solhint ./contracts/Reentrancy/ReentrancyVulnerable1.sol
 ReentrancyVulnerable1.solは上記のコーディングアンチパターンに当てはまるため、静的解析ツールsolhintでReentrancyAttackの攻撃ベクトルがあることが
 検知された。
 
-このコードはコーディングアンチパターンを回避する、つまりglobal stateの状態遷移を行った後に、transfer関数を呼び出すことで機弱性を修正することができる。
-[ReentrancyInvulnerable1.sol](./contracts/Reentrancy/ReentrancyInvulnerable1.sol)は機弱性を修正したコード。
+このコードはコーディングアンチパターンを回避する、つまりglobal stateの状態遷移を行った後に、transfer関数を呼び出すことで脆弱性を修正することができる。
+[ReentrancyInvulnerable1.sol](./contracts/Reentrancy/ReentrancyInvulnerable1.sol)は脆弱性を修正したコード。
 
 ### コード例2 ReentrancyVulnerable2.sol
 [ReentrancyVulnerable2.sol](./contracts/Reentrancy/ReentrancyVulnerable2.sol)は[Ethereum Smart Contract Best Practices(Known Attacks)](https://consensys.github.io/smart-contract-best-practices/known_attacks/)から参照した。
 
-このコードの機弱性はコード例１と同様にコーディングアンチパターンを回避することで、修正することができる。
-[ReentrancyInvulnerable2.sol](./contracts/Reentrancy/ReentrancyInvulnerable2.sol)は機弱性を修正したコード。
+このコードの脆弱性はコード例１と同様にコーディングアンチパターンを回避することで、修正することができる。
+[ReentrancyInvulnerable2.sol](./contracts/Reentrancy/ReentrancyInvulnerable2.sol)は脆弱性を修正したコード。
 
 solhintで静的解析した結果
 ```
@@ -66,10 +66,10 @@ $ solhint ./contracts/Reentrancy/ReentrancyVulnerable3.sol
 
 
 このコードの機弱性はコーディングアンチパターンを回避することで修正することができる。
-[ReentrancyInvulnerable3.sol](./contracts/Reentrancy/ReentrancyInvulnerable3.sol)は機弱性を修正したコード。
+[ReentrancyInvulnerable3.sol](./contracts/Reentrancy/ReentrancyInvulnerable3.sol)は脆弱性を修正したコード。
 
-## 論文A seurvey of attacks of Ethereum smart contractsから参照した機弱性のあるコード
-この論文はEthereumとそのHigh-levelプログラミング言語であるsolidityのセキュリティ機弱性について説明している。
+## 論文A seurvey of attacks of Ethereum smart contractsから参照した脆弱性のあるコード
+この論文はEthereumとそのHigh-levelプログラミング言語であるsolidityのセキュリティ脆弱性について説明している。
 
-[AttacksExample](./contracts/AttacksExample)はこの論文から参照した機弱性のあるコード例。
+[AttacksExample](./contracts/AttacksExample)は上記の論文から参照した脆弱性のあるコード例。
 
